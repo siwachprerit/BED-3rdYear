@@ -1,2 +1,3 @@
 import{ sum,sub } from "./file.mjs";
-console.log(sum,sub)
+import mult from "./file.mjs";
+console.log(sum,sub,mult);
