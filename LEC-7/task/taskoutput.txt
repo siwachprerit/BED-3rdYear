@@ -1,0 +1,32 @@
+[
+  {
+    "name": "James",
+    "age": "18",
+    "address": "CHD"
+  },
+  {
+    "name": "John",
+    "age": "21",
+    "address": "PKL"
+  },
+  {
+    "name": "Gordon",
+    "age": "43",
+    "address": "Mohali"
+  },
+  {
+    "name": "Shilpa",
+    "age": "34",
+    "address": "Barnala"
+  },
+  {
+    "name": "Sunita",
+    "age": "28",
+    "address": "Rajpura"
+  },
+  {
+    "name": "Shalini",
+    "age": "38",
+    "address": "Patiala"
+  }
+]
