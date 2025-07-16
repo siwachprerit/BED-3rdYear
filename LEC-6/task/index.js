@@ -1,24 +1,18 @@
-const fs = require("fs");
+const fs = require('fs');
 
-// Read data from demo.txt
-fs.readFile("../demo.txt", "utf8", (err, data1) => {
-    if (err) {
-        if(err) return console.log(err);
-    }
+fs.readFile('../demo.txt',"utf-8",function(err,data1) {
+    if(err) return console.log(err);
+    console.log(data1);
     
-    // Read data from demo2.txt
-    fs.readFile("../demo2.txt", "utf8", (err, data2) => {
-        if (err) {
-            if(err) return console.log(err);
-        }
+    fs.readFile('../demo2.txt',"utf-8",function(err,data2) {
+        if(err) return console.log(err);
+        console.log(data2);
         
-        // Combine both data with a separator
-        const combinedData = `Data from demo.txt:\n${data1}\n\nData from demo2.txt:\n${data2}`;
+        const data = data1 + "\n" + data2;
         
-        // Write combined data to task1.txt
-        fs.writeFile("../task1.txt", combinedData, "utf8", (err) => {
+        fs.writeFile('../task1.txt',data,function(err) {
             if(err) return console.log(err);
-            console.log("sucess!!creating taskfile");
-        });
-    });
-});
+            console.log("success!!!!");
+        })
+    })
+})
