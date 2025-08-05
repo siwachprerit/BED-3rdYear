@@ -32,4 +32,4 @@ function displayUser(user){
     `
     ul.appendChild(li);
 }
-getUsersData("http://localhost:3000/users")
+getUsersData("http://localhost:3000/users");
