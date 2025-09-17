@@ -27,7 +27,7 @@ async function addTweet(content,userId){
         
     })
 }
-// addTweet("my first tweet",1)
+// addTweet("my first tweet",3)
 // .then(()=> console.log("tweet added successfully"))
 // .catch((err)=>console.log(err.message));
 
@@ -95,13 +95,23 @@ async function deleteUser(userId) {
 
 async function getUsers(){
     let allusers=await prisma.user.findMany({
-        select:{
-            name:true,
-            email:true
+        // select:{
+        //     name:true,
+        //     email:true,
+        //     tweet:{select:{
+        //         content:true
+        //     }
+        //     }
+        // }
+        include:{
+            tweet:{
+                select:{content:true}
+            }
         }
 
     })
     return allusers;
 }
 getUsers()
-.then((data)=>console.log(data))
+.then((data)=>console.log(JSON.stringify(data,null,2)))
+
