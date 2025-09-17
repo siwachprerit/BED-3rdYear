@@ -1,0 +1,2 @@
+Create a login route and generate jet token with payload --> userId = userId._id
+In route post /blogs, add middleware isLogin, in this middelware verify jwt token and modifyrequest object like req.userId = decode.userId
